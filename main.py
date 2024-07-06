@@ -66,7 +66,7 @@ if uploaded_file is not None:
 
     # Initialize embeddings
     embeddings = HuggingFaceEmbeddings(
-        model_name=r'E:\LLM\sentencemodel',
+        model_name=r'your-path',
         model_kwargs={'device': 'cpu'}
     )
 
@@ -78,7 +78,7 @@ if uploaded_file is not None:
 
     # Initialize LLM
     llm = LlamaCpp(
-        model_path=r"E:\LLM\TinyLLama\tinyllama-1.1b-chat-v1.0.Q5_K_M.gguf",
+        model_path=r"your-path-to\tinyllama-1.1b-chat-v1.0.Q5_K_M.gguf",
         max_tokens=512,
         callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]),
         verbose=True,
